@@ -9,7 +9,9 @@ public static void main(String[] args) {
 public class Ex6 {
     public static void main(String[] args){
         String str = "amigoscode";
-        str = str.substring(1,str.length());
-        System.out.println("A"+str);
+        char capital = str.toUpperCase().charAt(0);
+        String sub = str.substring(1,str.length());
+        str = capital+sub;
+        System.out.println(str);
     }
 }
