@@ -12,7 +12,7 @@ public class Exercise {
 
 public class Ex5 {
     public static void main (String[] args){
-        String str = "D2theDev";
+        String str = "Amigoscode";
         str = str.toUpperCase();
         System.out.println(str);
 
