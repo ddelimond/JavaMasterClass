@@ -233,7 +233,7 @@ public class loopsAndArrays {
             String body ="";
 
            if(arr[i].length() >1){
-               body = arr[i].substring(1,arr.length-1);
+               body = arr[i].substring(1,arr[i].length());
                String newWord = cap+body;
                arr[i] = newWord;
            }
@@ -245,6 +245,13 @@ public class loopsAndArrays {
         }
         System.out.println("13. "+Arrays.toString(arr));
     }
+
+
+
+    /*
+
+
+     */
 
 
     public static void main (String[] args){
