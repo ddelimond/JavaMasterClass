@@ -250,8 +250,71 @@ public class loopsAndArrays {
 
     /*
 
-
+        public static void main(String[] args) {
+            Write a program that reverses an array of Strings
+            String[] content = {"you", "are", "how", "hello"}
+            Tip. Use for loop and you to start at highest index.
+            Output should be: hello how are you?. Note question mark at the end
+        }
      */
+
+    private static void ex14() {
+        String[] content = {"you", "are", "how", "hello" };
+        String sentence = "";
+
+        for (int i = content.length - 1; i >= 0; i--) {
+            if (i == 0) {
+                sentence = sentence + content[i];
+            } else {
+                sentence = sentence + content[i] + " ";
+            }
+        }
+        System.out.println("14. " + sentence + "?");
+    }
+
+    /*
+    public static void main(String[] args) {
+
+        Write a program that adds total amount for this string "0.90, 1.00, 9.00, 8.78, 0.01".
+
+        Tip:
+        - String input = "0.90, 1.00, 9.00, 8.78, 0.01";
+        - create variable to store result. double result = 0;
+        - convert string to array by using the String[] numbers = input.slit(", ")
+        - then loop.
+        - convert each string to decimal and add to current result
+            - use Double.parseDouble(string) to convert a string to double
+}
+     */
+
+    public static void ex15(){
+        String input = "0.90, 1.00, 9.00, 8.78, 0.01";
+        double result = 0;
+        String[] nums = input.split(", ");
+        for (String num:nums){
+          double x = Double.parseDouble(num);
+          result = result + x;
+        }
+        System.out.println("15. "+result);
+    }
+
+    /*
+    Write a program that takes arguments from the program args and loops through args and prints each item in args
+    Compile using: javac and run using: java
+    i.e. javac Exercise5.java | java Exercise5 foo bar baz
+
+    public static void main(String[] args) {
+        // loop through args here
+    }
+     */
+
+    public static void ex16(String[] args){
+        for(String arg: args){
+            System.out.println("16. "+arg);
+        }
+    }
+
+
 
 
     public static void main (String[] args){
@@ -269,6 +332,10 @@ public class loopsAndArrays {
         ex11();
         ex12();
         ex13();
+        ex14();
+        ex15();
+        ex16(args);
+
 
 
     }
