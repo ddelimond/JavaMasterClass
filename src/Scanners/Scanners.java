@@ -12,7 +12,7 @@ public class Scanners {
     // create a variable which is assigned to the value passed into the scanner from the terminal
     // print this variable
  */
-    public static void Ex1(){
+    private static void Ex1(){
         System.out.println("Enter a name.");
         String input = scanner.next();
         System.out.println("Hello "+input+"!");
