@@ -1,4 +1,4 @@
-package com.ddelimond;
+package Conditionals;
 
 public class Conditionals {
 

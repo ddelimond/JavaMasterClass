@@ -1,4 +1,4 @@
-package com.ddelimond;
+package Methods;
 
 public class Methods {
 
@@ -92,7 +92,7 @@ public class Methods {
 
     private static void countNumberOfWords(String sentence){
       String[] sent = sentence.split(" ");
-      int numOfWord = sent.length;
+      var numOfWord = sent.length;
         System.out.printf("The sentence contains "+numOfWord+" words.");
     }
 

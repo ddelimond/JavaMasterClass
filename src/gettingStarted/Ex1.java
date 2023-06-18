@@ -1,4 +1,4 @@
-package com.ddelimond;
+package gettingStarted;
 
 public class Ex1 {
     public static void main (String[] args){

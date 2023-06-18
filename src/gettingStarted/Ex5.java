@@ -1,4 +1,4 @@
-package com.ddelimond;
+package gettingStarted;
 
 /*
 package com.amigoscode;
