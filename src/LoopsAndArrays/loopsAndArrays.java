@@ -1,4 +1,4 @@
-package com.ddelimond;
+package LoopsAndArrays;
 import java.util.Arrays;
 
 public class loopsAndArrays {
