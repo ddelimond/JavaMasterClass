@@ -1,5 +1,7 @@
 package Methods;
 
+import Email.EmailValidator;
+
 public class Methods {
 
     /*
