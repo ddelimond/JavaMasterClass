@@ -49,7 +49,7 @@ public class FileExercise {
     public static void main (String[] args){
 
 
-        File file = createFile("src/Files/data.csvcsv");
+        File file = createFile("src/Files/data.csv");
         try{
             FileWriter fileWriter = new FileWriter(file);
             PrintWriter writer = new PrintWriter(fileWriter);
@@ -59,10 +59,8 @@ public class FileExercise {
 
             Scanner scanner = new Scanner(file);
             while(scanner.hasNext()){
-                System.out.println(scanner.nextLine().);
+                System.out.println(scanner.nextLine());
             }
-
-
         }
         catch (IOException e){
             System.out.println("unable to write");
