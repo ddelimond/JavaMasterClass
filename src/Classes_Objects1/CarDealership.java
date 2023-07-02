@@ -7,23 +7,10 @@ public class CarDealership {
     private int maxCarsOnDisplay;
     private ArrayList carsInStock;
 
-    CarDealership(String name, int max, ArrayList inStock){
+    public CarDealership(String name){
          this.name = name;
-         this.maxCarsOnDisplay = max;
-         this.carsInStock = inStock;
-    }
-
-    CarDealership(String name, ArrayList inStock){
-        this.name = name;
-        this.maxCarsOnDisplay = inStock.size()/2;
-        this.carsInStock = inStock;
-    }
-
-
-    CarDealership(String name, int max){
-        this.name = name;
-        this.maxCarsOnDisplay = max;
-        this.carsInStock = new ArrayList<>();
+         this.maxCarsOnDisplay = 0;
+         this.carsInStock = new ArrayList<>();
     }
 
     public String getName(){
@@ -38,13 +25,28 @@ public class CarDealership {
         return this.carsInStock;
     }
 
-    public void setName(String name){
-        this.name = name;
-    }
     public void setMaxCarsOnDisplay(int max){
         this.maxCarsOnDisplay = max;
     }
-    public void setCarsInStock(ArrayList stock){
-        this.carsInStock = stock;
+
+    public int getNumberOfCars(){
+        return getCarsInStock().size();
+    }
+
+    public void addCarToDealership(Object car){
+     this.carsInStock.add(car);
+    }
+
+
+    public void findCarByManufacturer(String property){
+       int listsize = this.carsInStock.size();
+
+       for(int i = 0; i<=listsize; i++){
+       }
+    }
+
+    @Override
+    public String toString(){
+        return String.format("{\n name: %s,\n maxDisplayCars: %d,\n carsInStock: %s,\n}",this.name, this.maxCarsOnDisplay, this.carsInStock.toString());
     }
 }

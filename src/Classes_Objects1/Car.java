@@ -15,32 +15,29 @@ public class Car {
     public Car(String manufacturer,int price){
         this.manufacturer = manufacturer;
         this.price = price;
-        this.engine = EngineType.Type3;
+        this.engine = EngineType.Straight;
     }
 
     public Car(String manufacturer){
         this.manufacturer = manufacturer;
-        this.price = 0;
-        this.engine = EngineType.Type2;
+        this.price = 35000;
+        this.engine = EngineType.Straight;
 
     }
 
-    public Car(int price){
-        this.manufacturer = "Toyota";
-        this.engine = EngineType.Type1;
-        this.price = price;
-    }
-
-    public Car(int price,EngineType engine){
-        this.manufacturer = "Toyota";
+    public Car(String manufacturer,EngineType engine){
+        this.manufacturer = manufacturer;
         this.engine = engine;
-        this.price = price;
-    }
 
-    public Car(EngineType engine){
-        this.manufacturer = "Toyota";
-        this.engine = engine;
-        this.price = 0;
+       switch(this.engine){
+           case Straight : this.price = 35000;
+           break;
+           case Diesel: this.price = 50000;
+           break;
+           case V: this.price = 78000;
+           break;
+           default: this.price = 35000;
+       }
     }
 
     public String getManufacturer(){
@@ -69,10 +66,6 @@ public class Car {
 
     @Override
     public String toString(){
-        System.out.printf("{%s,%d,%s}",getManufacturer(),getPrice(),getEngine());
-        return null;
+        return String.format("{ Manufacturer: %s, Price: %d, Engine: %s }",getManufacturer(),getPrice(),getEngine());
     }
-
-
-
 }
