@@ -38,11 +38,16 @@ public class CarDealership {
     }
 
 
-    public void findCarByManufacturer(String property){
-       int listsize = this.carsInStock.size();
-
-       for(int i = 0; i<=listsize; i++){
+    public Object findCarByManufacturer(String property){
+        Object result = null;
+       for(Object car :this.carsInStock.toArray()){
+           if(car.toString().contains(property)) {
+                result = car;
+                break;
+           }
        }
+
+        return result;
     }
 
     @Override
