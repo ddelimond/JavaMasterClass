@@ -25,6 +25,7 @@ public class Car {
 
     }
 
+
     public Car(String manufacturer,EngineType engine){
         this.manufacturer = manufacturer;
         this.engine = engine;
@@ -66,6 +67,7 @@ public class Car {
 
     @Override
     public String toString(){
+        System.out.println("Hello");
         return String.format("{ Manufacturer: %s, Price: %d, Engine: %s }",getManufacturer(),getPrice(),getEngine());
     }
 }
