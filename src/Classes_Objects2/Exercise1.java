@@ -3,7 +3,8 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
-
+import java.util.Arrays;
+import java.util.Scanner;
 public class Exercise1 {
 
     public static String data = """
@@ -27,13 +28,16 @@ public class Exercise1 {
             17,Jordana,Everex,jeverexg@ucla.edu,F
             18,Belle,Rother,brotherh@auda.org.au,F
             19,Clevie,Sifflett,csiffletti@furl.net,M
-            20,Gretchen,Abell,gabellj@1688.com,F
-            """;
+            20,Gretchen,Abell,gabellj@1688.com,F """;
 
 
     public  static void main(String args []) throws IOException {
 
         File file = new File("src/Classes_Objects2/data.csv");
+        Scanner scanner = new Scanner(file);
+        int index =0;
+        String[] people = new String[21];
+
         if (!file.exists()) {
             file.createNewFile();
         }
@@ -42,6 +46,17 @@ public class Exercise1 {
         printWriter.println(data);
         printWriter.flush();
         printWriter.close();
+
+        if(scanner.hasNextLine()){
+            scanner.nextLine();
+        }
+        while(scanner.hasNextLine()){
+
+            people[index] = scanner.nextLine() + "\n";
+            index++;
+        }
+
+        System.out.println(Arrays.toString(people));
 
     }
 
